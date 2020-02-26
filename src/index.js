@@ -92,6 +92,7 @@ init.install = function install(_Vue, { appId }) {
 init.loadScript = function loadScript(appId, done) {
   const script = document.createElement('script')
   script.async = true
+  script.defer = true
   script.src = `https://widget.intercom.io/widget/${appId}`
   const firstScript = document.getElementsByTagName('script')[0]
   firstScript.parentNode.insertBefore(script, firstScript)
