@@ -136,6 +136,7 @@ init.install = function install(_Vue, ref) {
 init.loadScript = function loadScript(appId, done) {
   var script = document.createElement('script');
   script.async = true;
+  script.defer = true;
   script.src = "https://widget.intercom.io/widget/" + appId;
   var firstScript = document.getElementsByTagName('script')[0];
   firstScript.parentNode.insertBefore(script, firstScript);
